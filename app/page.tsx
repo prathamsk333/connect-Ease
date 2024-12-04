@@ -14,6 +14,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       <header className="py-4 px-6 bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center">
+
           <Link href="/" className="text-2xl font-bold text-blue-600">
             ConnectEase
           </Link>
@@ -86,7 +87,7 @@ export default function LandingPage() {
             </div>
             <div className="lg:w-1/2 ">
               <Image
-                src="/hero.webp?height=400&width=600"
+                src="/hero.webp"
                 alt="ConnectEase App Interface"
                 width={600}
                 height={400}
