@@ -14,7 +14,6 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       <header className="py-4 px-6 bg-white shadow-sm">
         <div className="container mx-auto flex justify-between items-center">
-
           <Link href="/" className="text-2xl font-bold text-blue-600">
             ConnectEase
           </Link>
@@ -29,10 +28,11 @@ export default function LandingPage() {
             <Link href="#" className="text-gray-600 hover:text-blue-600">
               About
             </Link>
-
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-              Get Started
-            </button>
+            <Link href="/options">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Get Started
+              </button>
+            </Link>
           </nav>
           <button className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? <X /> : <Menu />}
@@ -53,7 +53,7 @@ export default function LandingPage() {
             <Link href="#" className="text-gray-600 hover:text-blue-600">
               About
             </Link>
-            <Link href="/call">
+            <Link href="/options">
               <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
                 Get Started
               </button>
@@ -75,7 +75,7 @@ export default function LandingPage() {
                 effortlessly.
               </p>
               <div className="space-x-4 ">
-                <Link href="/call">
+                <Link href="/options">
                   <button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-7 py-3 rounded">
                     Start for Free
                   </button>
@@ -86,12 +86,10 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="lg:w-1/2 ">
-              <Image
+              <img
                 src="/hero.webp"
                 alt="ConnectEase App Interface"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-auto h-auto"
               />
             </div>
           </div>
@@ -153,7 +151,7 @@ export default function LandingPage() {
               Join thousands of satisfied users and experience the future of
               communication.
             </p>
-            <Link href="/call">
+            <Link href="/options">
               <button className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 rounded">
                 Get Started for Free
               </button>

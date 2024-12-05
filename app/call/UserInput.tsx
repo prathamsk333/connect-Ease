@@ -1,22 +1,26 @@
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 
 interface UserInputProps {
-  onJoin: (name: string) => void
+  onJoin: (name: string) => void;
 }
 
 const UserInput: React.FC<UserInputProps> = ({ onJoin }) => {
-  const [name, setName] = useState('')
+  const [name, setName] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (name.trim()) {
-      onJoin(name.trim())
+      onJoin(name.trim());
     }
-  }
+  };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="p-6 bg-white rounded-lg shadow-md">
+      <form
+        onSubmit={handleSubmit}
+        className="p-6 bg-white rounded-lg shadow-md"
+      >
         <h2 className="mb-4 text-2xl font-bold text-center">Join Video Call</h2>
         <input
           type="text"
@@ -34,7 +38,7 @@ const UserInput: React.FC<UserInputProps> = ({ onJoin }) => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default UserInput
+export default UserInput;
