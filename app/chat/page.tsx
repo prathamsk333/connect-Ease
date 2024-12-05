@@ -56,6 +56,17 @@ const ChatPage = () => {
     };
   }, []);
 
+  const clearChat = async () => {
+    if (channel) {
+      try {
+        await channel.truncate();
+        console.log('All chats cleared!');
+      } catch (error) {
+        console.error('Error clearing chats:', error);
+      }
+    }
+  };
+
   if (!chatClient || !currentUser) return <div>Setting up chat...</div>;
 
   return (
@@ -63,6 +74,7 @@ const ChatPage = () => {
       <Channel channel={channel}>
         <Window>
           <ChannelHeader />
+          <button onClick={clearChat} style={{ margin: '10px' }}>Clear All Chats</button>
           <MessageList />
           <MessageInput />
         </Window>
